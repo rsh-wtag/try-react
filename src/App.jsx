@@ -4,7 +4,8 @@ import ChildA from './components/ChildA';
 // What is contextAPI?
 // >> create, provider, consumer
 // How to use it?
-// >> is contextAPI also problematic like propDrilling?
+// is contextAPI also problematic like propDrilling? 
+// >> Yes. Bcz for small amount of data, it is important to we need to use nested methods. Solution --> useContext hook
 
 const data = createContext();
 const data1 = createContext();
