@@ -1,22 +1,12 @@
 import React from 'react';
-import Counter from './components/Counter';
-import ComplexCounter from './components/ComplexCounter';
-import ItemList from './components/ItemList';
+import ChildA from './components/ChildA';
 
 const App = () => {
+  const name = "Radoan"
   return (
-    <div>
-      <h1>React useReduce Examples</h1>
-      
-      <Counter />
-      <br />
-
-      <ComplexCounter />
-      <br />
-
-      <ItemList />
-      <br />
-    </div>
+    <>
+      <ChildA name = {name} />
+    </>
   );
 };
 
