@@ -1,13 +1,23 @@
-import React from 'react';
+import React, {createContext} from 'react';
 import ChildA from './components/ChildA';
 
-const App = () => {
+// What is contextAPI?
+// >> create, provider, consumer
+// How to use it?
+// >> is contextAPI also problematic like propDrilling?
+
+const data = createContext();
+
+function App() {
   const name = "Radoan"
   return (
     <>
-      <ChildA name = {name} />
+    <data.Provider value = {name}>
+      <ChildA />
+    </data.Provider>
     </>
   );
 };
 
 export default App;
+export {data};

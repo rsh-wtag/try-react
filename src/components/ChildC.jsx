@@ -1,8 +1,19 @@
 import React from "react";
+import {data} from "../App"
 
-function ChildC({name}){
+function ChildC(){
     return (
-        <h1>Child C displaying {name} </h1>
+        <>
+            <data.Consumer>
+                {
+                    (name) => {
+                        return (
+                            <h1>Context API is saying my name is {name}</h1>
+                        )
+                    }
+                }
+            </data.Consumer>
+        </>
     )
 }
 
