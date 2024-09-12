@@ -1,5 +1,5 @@
 import React from "react";
-import {data} from "../App"
+import {data, data1} from "../App"
 
 function ChildC(){
     return (
@@ -8,7 +8,15 @@ function ChildC(){
                 {
                     (name) => {
                         return (
-                            <h1>Context API is saying my name is {name}</h1>
+                            <data1.Consumer>
+                                {
+                                    (gender) => {
+                                        return (
+                                            <h1> ContextAPI is saying that my name is {name} and my gender is {gender} </h1>
+                                        )
+                                    }
+                                }
+                            </data1.Consumer>
                         )
                     }
                 }

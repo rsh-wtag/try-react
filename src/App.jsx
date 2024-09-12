@@ -7,17 +7,21 @@ import ChildA from './components/ChildA';
 // >> is contextAPI also problematic like propDrilling?
 
 const data = createContext();
+const data1 = createContext();
 
 function App() {
   const name = "Radoan"
+  const gender = "Male"
   return (
     <>
     <data.Provider value = {name}>
+      <data1.Provider value = {gender}>
       <ChildA />
+      </data1.Provider>
     </data.Provider>
     </>
   );
 };
 
 export default App;
-export {data};
+export {data, data1};
